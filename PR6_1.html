@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ПР 6</title>
+		<script>
+			var a = 10, b = 3;
+			var c = a%b;
+			alert("Задача 1.1\n" + c);
+		</script>
+		
+		<script>
+			var a = 10, b  = 6, c = a%b;
+			if (c == 0)  alert("Задача 1.2\n" + "Делится");
+			else alert("Задача 1.2\n" + "Делится с остатком " + c);
+		</script>
+		
+		<script>
+			var st = Math.pow(2, 10);
+			alert("Задача 2.1\n" + st);
+		</script>
+		
+		<script>
+			var st = Math.sqrt(245);
+			alert("Задача 2.2\n" + st);
+		</script>
+		
+		<script>
+			var arr = [4, 2, 5, 19, 13, 0, 10];
+			var s = 0;
+			for (var i = 0; i < arr.length; i++){
+				s+=Math.pow(arr[i],3);
+			}
+			alert("Задача 2.3\n" + s);
+		</script>
+		
+		<script>
+			var st = Math.sqrt(379);
+			alert("Задача 3.1\n" + 
+			"До целых " + Math.round(st) + 
+			"\nДо десятых " + st.toFixed(1) + 
+			"\nДо сотых " + st.toFixed(2));
+		</script>
+		
+		<script>
+			var st = Math.sqrt(587);
+			alert("Задача 3.2\n" + 
+			"В большую сторону " + Math.ceil(st) + 
+			"\nВ меньшую сторону " + Math.floor(st));
+		</script>
+		
+		<script>
+			var arr=[4, -2, 5, 19, -130, 0, 10];
+			var max = Math.max.apply(null, arr);
+			var min = Math.min.apply(null, arr);
+			alert("Задача 4.1\n" + 
+			"Max " + max + 
+			"\nMin " + min);
+		</script>
+		
+		<script>
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			};
+			alert("Задача 5.1\n" + 
+			"Случайное число " + getRandomInt(1, 100));
+		</script>
+		
+		<script>
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			};
+			var arr=[];
+			for (var i = 0;i < 10; i++) arr[i] = getRandomInt(1, 10);
+			alert("Задача 5.2\n" + arr);
+		</script>
+		
+		<script>
+			var a = 4, b = 7, a2 = 9, b2 = 5;
+			alert("Задача 6.1\n" + 
+			"1) |4 - 7| = " + Math.abs(a-b) + 
+			"\n2) |9 - 5| = " + Math.abs(a2 - b2));
+		</script>
+		
+		<script>
+			var a = 3, b = 5, c = Math.abs(a - b);
+			var a2 = 6, b2 = 1, c2 = Math.abs(a2 - b2);
+			alert("Задача 6.2\n" + 
+			"1) " + c + 
+			"\n2) " + c2);
+		</script>
+		
+		<script>
+			var arr = [12, 15, 20, 25, 59, 79];
+			var s = 0;
+			for (var i = 0; i < arr.length; i++) s+=arr[i];
+			var sa = s/(arr.length);
+			alert("Задача 7.1\n" + sa);
+		</script>
+		
+		<script>
+			function factorial(a){
+				for (var i = a-1; i > 0; i--) a*=i;
+				return (a);
+				};
+			alert("Задача 7.2\n" + 
+			"10! = " + factorial(10));
+		</script>
+		
+	</head>
+
+	<body>
+	</body>
+</html>
