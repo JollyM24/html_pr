@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ПР 6</title>
+		<script>
+			var st='js';
+			alert("Задача 8.1\n" + st.toUpperCase() );
+		</script>
+		
+		<script>
+			var st='JS';
+			alert("Задача 8.2\n" + st.toLowerCase() );
+		</script>
+		
+		<script>
+			var st='я учу javascript!';
+			alert("Задача 9.1\n" + st.length);
+		</script>
+		
+		<script>
+			var st='я учу javascript!';
+			alert("Задача 9.2\n" + 
+				st.substr(2,3) + "\n" + 
+				st.substring(2,6) + '\n' + 
+				st.slice(2,-12) + '\n' +
+				st.substr(6,10) + '\n' + 
+				st.substring(6,16) + '\n' + 
+				st.slice(6, -1));
+		</script>
+
+		<script>
+			var st='я учу javascript!';
+			alert("Задача 9.3\n" + 
+				st.indexOf('учу'));
+		</script>
+		
+		<script>
+			var st='я учу javascript! я учу javascript! я учу javascript! я учу javascript!';
+			var n = 41;
+			var result;
+			if (st.length > n) result=st.substr(0,n) + '...';
+			else result = st;
+			alert("Задача 9.4\n" + result);
+		</script>
+		
+		<script>
+			var st='Я-учу-javascript!';
+			alert("Задача 10.1\n" + 
+				st.replace(/-/g, '!'));
+		</script>
+		
+		<script>
+			var st='я учу javascript!';
+			var arr=st.split(' ');
+			alert("Задача 11.1\n" + 
+				arr[0] + '\n' +  arr[1] + '\n' + arr[2]);
+		</script>
+		
+		<script>
+			var st='я учу javascript!';
+			var arr=st.split('');
+			alert("Задача 11.2\n" + 
+				arr[0] + '\n' + arr[2] + '\n' + arr[6]);
+		</script>
+		
+		<script>
+			var date='2020-11-18';
+			var d=date.split('-');
+			var result=d[2]+'.' + d[1] + '.' + d[0];
+			alert("Задача 11.3\n" + 
+				result);
+		</script>
+		
+		<script>
+			var arr=['я', 'учу', 'javascript', '!'];
+			alert("Задача 12.1\n" + 
+				arr.join('+'));
+		</script>
+	</head>
+		
+	<body>
+	</body>
+</html>
