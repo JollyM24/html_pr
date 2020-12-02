@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		</style>
+		<script>
+				function smile(id) {
+				document.getElementById('sad').value = ": D";	
+			}
+			
+			function heart(im) {
+				document.getElementById('broken_heart').src = "https://sun9-3.userapi.com/c854320/v854320992/11e765/Sgh4fNQtgCA.jpg?ava=1";	
+			}
+		</script>
+	</head>
+	
+	 <body>
+	 <h1>Задача 2.1</h1>
+		<div>
+			<input id="sad" maxlength="30" size="40" value=":*(">
+			<button  onclick="smile(sad)">Развеселить смайлик</button>
+		</div>
+		<hr>
+		<h1>Задача 2.2</h1>
+		<div>
+			<img id="broken_heart" src="http://johnkrolldigital.com/wp-content/uploads/2016/07/Dislike-Filled-50.png">
+			<button onclick="heart(broken_heart)">Изменить изображение</button>
+		</div>
+	</body>
+</html>
