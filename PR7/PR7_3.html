@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		div {
+		display: inline;}
+		</style>
+		<script>
+			function task1(elem) {
+				elem.value = "Текст 2";
+			}
+			
+			function unblock() {
+				var block = document.getElementById('block');
+				var unblock  =document.getElementById('unblock');
+				unblock.disabled = true;
+			}
+			
+			function block(){
+				var block = document.getElementById('block');
+				var unblock  =document.getElementById('unblock');
+				unblock.disabled = false;
+				block.style.display = 'unblock';
+			} 
+			
+			function count(elem) {
+			elem.value = parseInt(elem.value) + 1;
+			}
+		</script>
+	</head>
+	
+	 <body>
+			<input type="text" value="Текст 1" onfocus="task1(this)">
+			<hr>
+			<div>
+				<input type="submit" onclick="unblock(this)" value="Кнопка 1"  id="unblock" style="float: left;">
+				<input type="submit" onclick="block('button')" value="Кнопка  2" id="block" style="float:left">
+			</div>
+			<br>
+			<hr>
+		
+			<input type="submit" onclick="count(this)" value="0">
+	</body>
+</html>
