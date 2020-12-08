@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		#text1 {
+			width: 120px;
+			height: 50px;
+			}
+		}
+		</style>
+		<script>
+			function buttonclick(element) {
+			var element=document.getElementById('text1');
+			element.value = "	Вы нажали на кнопку";
+			element.style.color = "grey";
+			element.style.width = "180px";
+			element.style.height = "80px";
+			element.style.borderRadius = "40px";
+			element.style.background = "cyan";
+			}
+			
+			function removeText(element) {
+				var element = document.getElementById('text2');
+				element.style.display = 'none';
+				}
+			
+			function returnText(element) {
+				var element = document.getElementById('text2');
+				element.style.display = 'inline';
+				}
+		</script>
+	</head>
+	
+	 <body>
+			<input type="text" value="Нажмите на кнопку"  id="text1">
+			<button onclick="buttonclick()">Кнопка</button>
+			<hr>
+			<input type="text" value="Исчезающее поле"  id="text2"><br>
+			<button onclick="removeText()">Убрать</button>
+			<button onclick="returnText()">Вернуть</button>
+	</body>
+</html>
