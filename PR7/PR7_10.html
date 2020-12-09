@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+			.pane {
+			  padding: 10px 20px 10px;
+			  border: solid 2px grey;
+			  position: relative;
+			  margin: 5px;
+			}
+
+			.remove-button {
+			  position: absolute;
+			  font-size: 90%;
+			  top: 0;
+			  color:black;
+			  right: 10px;
+			  display: block;
+			  width: 24px;
+			  height: 24px;
+			  border: none;
+			  background: transparent;
+			  cursor: pointer;
+			}
+		</style>
+	</head>
+	
+	 <body>
+		<div>
+			<div class="pane">
+				Первое сообщение.
+			 </div>
+			<div class="pane">
+				Второе сообщение.
+			  </div>
+			<div class="pane">
+				Третье сообщение.
+			  </div>
+		  </div>
+		  <script>
+			let panes = document.querySelectorAll('.pane');
+			for(let pane of panes) {
+			  pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+			  pane.firstChild.onclick = () => pane.remove();
+			}
+		  </script>
+	</body>
+</html>
