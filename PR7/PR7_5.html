@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		#result, #text2_2 {
+			display: inline;
+			}
+		</style>
+		<script>
+			function func1() {
+				var elem = document.getElementsByTagName('p');
+				elem[0].innerHTML = '<b><i><big>Измененный абзац при помощи innerHTML.</big></i></b>';
+			}
+			
+			function findSum(elem) {
+				var a = document.getElementById('first').value;
+				var b = document.getElementById('second').value;
+				var sum = document.getElementById('result');
+				sum.innerHTML = Number(a) + Number(b);
+				}
+				
+				function show() {
+					var a = document.getElementById('text2').value;
+					var b = document.getElementById('text2_2');
+					b.innerHTML = a;
+				}
+				
+				function show2() {
+				var elem = document.getElementById("links");
+				elem.innerHTML = '<a href="https://www.google.ru/">ссылка1(http://google.ru)</a><br><a href="https://tut.by/">ссылка2(http"//tut.by)</a><br><a href="https://yandex.ru/">ссылка3(http://yandex.ru)</a>';
+				}
+		</script>
+	</head>
+	
+	 <body>
+		<p>Абзац произвольного текста для задания 5.</p>
+		<button onclick="func1()">Кнопка</button>
+		<hr>
+		<input type="text" id="first">+<input type="text" id="second">=<div id="result" value="0"></div><br>
+		<button onclick="findSum()">Нажмите, чтобы сложить</button>
+		<hr>
+		<input type="text" id="text2" placeholder="Введи в меня текст!"><div id="text2_2"></div>
+		<br><button onclick="show()"></button>
+		<hr>
+		<p id="links">
+			<a href="https://www.google.ru/">ссылка1</a><br>
+			<a href="https://tut.by/">ссылка2</a><br>
+			<a href="https://yandex.ru/">ссылка3</a></p>
+			<button onclick="show2()">Нажмите на меня!</button>
+	</body>
+</html>
