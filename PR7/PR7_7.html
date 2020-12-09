@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		</style>
+		<script>
+			function func1(){
+			window.setInterval(timer, 1000);
+			}
+			function timer(){
+			var test = document.getElementById('test1');
+			test.innerHTML = parseInt(test.innerHTML)+1;
+			}
+			
+			function func2() {
+			window.timer = window.setInterval(timer2, 1000);
+			}
+			function timer2(){
+			var test = document.getElementById('test2');
+			test.innerHTML = parseInt(test.innerHTML)+1;
+			}	
+			function stop() {
+			window.clearInterval(window.timer);
+			}
+			
+			function func3(){
+				window.clockId = window.setInterval(clocks, 500);
+			}
+			function clocks() {
+				var clock = document.getElementById('test3');
+				var date = new Date();
+				clock.innerHTML = zero(date.getHours())+':'+ zero(date.getMinutes())+':'+ zero(date.getSeconds());
+			}
+			function zero(num){
+				if (num < 10) return '0' + num;
+				else return num;
+			}
+			
+			function func4() {
+				window.slider1 = window.setInterval(slider, 2000);
+			}
+			function slider() {
+				var img1 = document.getElementById('img1');
+				var img2 = document.getElementById('img2');
+				var img3 = document.getElementById('img3');
+				var img = img1.src;
+				img1.src = img2.src;
+				img2.src = img3.src;
+				img3.src = img;
+				}
+				
+				function func5() {
+				window.slider2 = window.setInterval(slider2, 2000);
+				}
+				function slider2() {
+					var img21 = document.getElementById('img21');
+					var img22 = document.getElementById('img22');
+					var img23 = document.getElementById('img23');
+					var img24 = document.getElementById('img24');
+					var img25 = document.getElementById('img25');
+					var img20 = img21.src;
+					img21.src = img22.src;
+					img22.src = img23.src;
+					img23.src = img24.src;
+					img24.src = img25.src;
+					img25.src = img20;
+				}
+				function stopslider2() {
+				window.clearInterval(window.slider2);
+				}
+				
+				function func6() {
+				window.clock6 = window.setInterval(clock6, 1000);
+				}
+				function clock6() {
+					var hours = document.getElementById('hours');
+					var minutes = document.getElementById('minutes');
+					var seconds = document.getElementById('seconds');
+					var now = new Date();
+					var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+					var x =  Math.floor((midnight - now)/1000);
+					var newHours  = Math.floor(x/3600);
+					var newMinutes = Math.floor((x-newHours*3600)/60);
+					var newSeconds = Math.floor(x%60);
+					hours.innerHTML   = newHours;
+					minutes.innerHTML = newMinutes;
+					seconds.innerHTML = newSeconds; 
+				}
+		</script>
+	</head>
+	
+	 <body>
+			<div id="71">
+				<p id="test1">0</p>
+			<input type="submit" value="Нажмите на меня!"  onclick="func1()">
+			</div>
+			<hr>
+			
+			<div id="72">
+				<p id="test2">0</p>
+			<input type="submit" value="Нажмите на меня!" onclick="func2()">
+			<input type="submit" value="Остановить" onclick="stop()">
+			</div>
+			<hr>
+			
+			<div id="73">
+				<p id="test3">00:00:00</p>
+				<input type="submit" value="Нажмите на меня!"  onclick="func3()">
+			</div>
+			<hr>
+			
+			<div>
+				<img src="https://sun9-35.userapi.com/c5052/u96893752/d_a3b23e1f.jpg?ava=1" id="img1">
+				<img src="https://i1.sndcdn.com/artworks-000258418055-ws8lss-large.jpg" id ="img2" style="display: none">
+				<img src="https://i1.sndcdn.com/artworks-000472293063-d1tdef-large.jpg" id="img3" style="display: none">
+				<br><input type="submit" value="Кнопка" onclick="func4()">
+			</div>
+			<hr>
+			
+			<div>
+				<img src="https://imaginaria.ru/uploads/images/00/93/86/2018/01/25/avatar_100x100.jpg?030000" id="img21">
+				<img src="http://p5.diaoyu.com/group5/M00/B9/15/CgAAuFkqesSAeqWKAAC1rbJRXfc230_small.jpg" id ="img22" style="display: none">
+				<img src="https://photos.connectingsingles.com/puzzle/8/puzzle_15806.jpg" id="img23" style="display: none">
+				<img src="http://www.biletomsk.ru/img/news/1524628784_voskresnie-master-kolassi-dlya-detei-v-omske.jpg" id="img24" style="display: none">
+				<img src="https://sun9-48.userapi.com/c631219/v631219796/442aa/-gYMpOZ-GFY.jpg?ava=1" id="img25" style="display: none">
+				<br><input type="submit" value="Запустить" onclick="func5()">
+				<input type="submit" value="Остановить" onclick="stopslider2()">
+			</div>
+			<hr> 
+			
+			<div>
+				До полуночи <br>
+				<div id="hours"> </div> часов
+				<div id="minutes"></div> минут
+				<div id="seconds"></div> секунд
+				<br><input type="submit" value="Узнать" onclick="func6()">
+			</div>
+	</body>
+</html>
