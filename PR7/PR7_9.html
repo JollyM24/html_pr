@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		#elem1 {
+			width: 1000px;
+			height: 1500px;
+			padding: 30px;
+			border: 15px solid red;
+			overflow: auto;
+		}
+		</style>
+		<script>
+			function func1() {
+				alert('текущая прокрутка сверху: ' + Math.floor(window.pageYOffset));
+			}
+			
+			function func2() {
+				alert('текущая прокрутка по горизонтали: ' + Math.floor(window.pageXOffset));
+			}
+			
+			function func3() {
+				var footerObj = document.getElementById('footer');
+				footerObj.scrollIntoView();
+			}
+		</script>
+		
+	</head>
+	
+	 <body>
+			<div id="elem1">
+				JavaScript - Мультипарадигменный язык программирования. Поддерживает объектно-ориентированный,
+				императивный и функциональный стили. Является реализацией стандарта
+				ECMAScript. JavaScript - Мультипарадигменный язык программирования. Поддерживает объектно-ориентированный,
+				императивный и функциональный стили. Является реализацией стандарта
+				ECMAScript. JavaScript - Мультипарадигменный язык программирования. Поддерживает объектно-ориентированный,
+				императивный и функциональный стили. Является реализацией стандарта
+				ECMAScript.
+				<br><button onclick="window.scrollBy(0, 300)">Прокрутить на 300px вниз</button>
+				<br><button onclick="func3()">Прокрутить вниз</button>
+			</div>
+			<div id="footer" style="display: inline">
+			<button onclick="func1()">Узнать уровень прокрутки по вертикали</button>
+			<button onclick="func2()">Узнать уровень прокрутки по горизонтали</button>
+			<br>
+			<button onclick="window.scrollTo(300, 500)">Прокрутить в заданную точку</button>
+			</div>
+			<hr>
+			
+	</body>
+</html>
