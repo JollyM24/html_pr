@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+			.carousel {
+			  position: relative;
+			  width: 450px;
+			  padding: 10px 60px;
+			  border: 1px solid #CCC;
+			  background: #eee;
+			}
+			.carousel img {
+			  width: 130px;
+			  height: 130px;
+			  display: block;
+			  margin: 0 3px;
+			}
+			.arrow {
+			  position: absolute;
+			  top: 60px;
+			  background: #ddd;
+			  border: 1px solid gray;
+			  font-size: 30px;
+			  border-radius: 50px;
+			  color: #444;
+			  display: block;
+			}
+			.arrow:focus {
+			  outline: none;
+			}
+			.arrow:hover {
+			  background: #ccc;
+			  cursor: pointer;
+			}
+			.prev {
+			  left: 7px;
+			}
+			.next {
+			  right: 7px;
+			}
+			.gallery {
+			  width: 390px;
+			  overflow: hidden;
+			}
+			.gallery ul {
+			  height: 130px;
+			  width: 1200px;
+			  padding: 0;
+			  list-style: none;
+			  transition: margin-left 300ms;
+			  font-size: 0;
+			}
+			.gallery li {
+			  display: inline-block;
+			}
+		</style>
+	</head>
+	
+	 <body>
+		 <div id="carousel" class="carousel">
+			<button class="arrow prev"><</button>
+			<div class="gallery">
+			  <ul class="images">
+				<li><img src="https://imaginaria.ru/uploads/images/00/93/86/2018/01/25/avatar_100x100.jpg?030000"></li>
+				<li><img src="http://p5.diaoyu.com/group5/M00/B9/15/CgAAuFkqesSAeqWKAAC1rbJRXfc230_small.jpg"></li>
+				<li><img src="https://photos.connectingsingles.com/puzzle/8/puzzle_15806.jpg"></li>
+				<li><img src="http://www.biletomsk.ru/img/news/1524628784_voskresnie-master-kolassi-dlya-detei-v-omske.jpg"></li>
+				<li><img src="https://sun9-48.userapi.com/c631219/v631219796/442aa/-gYMpOZ-GFY.jpg?ava=1"></li>
+			  </ul>
+			</div>
+			<button class="arrow next">></button>
+		  </div>
+		  
+		   <script>
+				var width = 130; 
+				var count = 2; 
+				var list = carousel.querySelector('ul');
+				var listElems = carousel.querySelectorAll('li');
+				var position = 0;
+				
+				carousel.querySelector('.prev').onclick = function() {
+				  position += width * count;
+				  position = Math.min(position, 0)
+				  list.style.marginLeft = position + 'px';
+				};
+				
+				carousel.querySelector('.next').onclick = function() {
+				  position -= width * count;
+				  position = Math.max(position, -width * (listElems.length - count));
+				  list.style.marginLeft = position + 'px';
+				};
+			  </script>
+	</body>
+</html>
