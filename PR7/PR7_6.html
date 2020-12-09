@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		</style>
+		<script>
+		function func1(){
+			var elem = document.getElementsByTagName('p');
+			for (var i = 0; i < elem.length-1; i++)
+			elem[i].innerHTML = 'Абзац изменился';
+		}
+		
+		function func2() {
+			var elem = document.getElementsByTagName('div');
+			for (var i = 0; i < elem.length; i++)
+			elem[i].innerHTML = i + '. Абзац с текстом';
+		}
+		</script>
+	</head>
+	
+	 <body>
+		<p>Абзац 1</p>
+		<p>Абзац 2</p>
+		<p>Абзац 3</p>
+		<button onclick="func1()">Кнопка</button>
+		<hr>
+		<div>Абзац с текстом</div>
+		<div>Абзац с текстом</div>
+		<div>Абзац с текстом</div>
+		<div>Абзац с текстом</div>
+		<div>Абзац с текстом</div>
+		<div>Абзац с текстом</div>
+		<div>Абзац с текстом</div>
+		<div>Абзац с текстом</div>
+		<button onclick="func2()">Кнопка</button>
+	</body>
+</html>
