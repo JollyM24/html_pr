@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		.tree span {
+			  cursor: pointer;
+			}
+			.tree span:hover {
+			  font-weight: bold;
+			}
+		</style>
+	</head>
+	
+	 <body>
+		 <ul class="tree" id="tree">
+			<li>Фрукты, овощи, ягоды
+			  <ul>
+				<li>Фрукты
+				  <ul>
+					<li>Абрикос</li>
+					<li>Арбуз</li>
+					<li>Дыня</li>
+					<li>Бананы</li>
+					<li>Персики</li>
+					<li>Мандарины</li>
+					<li>Хурма</li>
+					<li>Яблоки</li>
+				  </ul>
+				</li>
+				<li>Ягоды
+				  <ul>
+					<li>Вишня</li>
+					<li>Клубника</li>
+					<li>Малина</li>
+					<li>Голубика</li>
+					<li>Клюква</li>
+					<li>Виноград</li>
+				  </ul>
+				</li>
+				<li>Овощи
+				  <ul>
+					<li>Помидоры</li>
+					<li>Огурцы</li>
+					<li>Перец</li>
+					<li>Кабачок</li>
+					<li>Баклажан</li>
+				  </ul>
+				</li>
+			  </ul>
+			</li>
+		  <script>
+			 for (let li of tree.querySelectorAll('li')) {
+				  var span = document.createElement('span');
+				  li.prepend(span);
+				  span.append(span.nextSibling); 
+				}
+
+				tree.onclick = function(event) {
+				  if (event.target.tagName != 'SPAN') {
+					return;
+				  }
+				 var childrenContainer = event.target.parentNode.querySelector('ul');
+				  if (!childrenContainer) return;
+				  childrenContainer.hidden = !childrenContainer.hidden;
+				}
+		</script>
+	</body>
+</html>
