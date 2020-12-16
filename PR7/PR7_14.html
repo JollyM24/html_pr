@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+		</style>
+	</head>
+	
+	 <body>
+		  <div id="contents">
+			<p>
+			  Посетить <a href="https://yandex.ru/"><b>Яндекс</b></a> или 
+			  <a href="https://www.google.ru/"><i>Google</i></a>
+			</p>
+			<p>
+			  Посетить <a href="http://wikipedia.org">Википедию</a>
+			</p>
+			<p>
+			  Посетить <a href="https://html5book.ru/">HTML5BOOK</a>
+			</p>
+		  </div>
+		  
+		  <script>
+				 contents.onclick = function(event) {
+					  function handleLink(href) {
+						var isLeaving = confirm(`Перейти по ссылке ${href}?`);
+						if (!isLeaving) return false;
+					  }
+					  var target = event.target.closest('a');
+					  if (target && contents.contains(target)) {
+						return handleLink(target.getAttribute('href'));
+					  }
+				};
+			</script>
+	</body>
+</html>
