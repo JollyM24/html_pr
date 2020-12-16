@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+			#plane {
+				position: relative;
+				cursor: pointer;
+				transform: scale(-1,1);
+				height: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img id="plane" src="https://freepngimg.com/thumb/airplane/58336-airplane-animation-aircraft-plane-cartoon-free-download-png-hq.png">
+
+		<script>
+			plane.onclick = function() {
+				var start = Date.now();
+				var timer = setInterval(function() {
+					var timePassed = Date.now() - start;
+					plane.style.left = timePassed / 5 + 'px';
+					if (timePassed > 2000) clearInterval(timer);
+				}, 20);
+			}
+		</script>
+	</body>
+</html>
