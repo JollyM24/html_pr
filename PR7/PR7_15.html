@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Практическая работа</title>
+		<style>
+			#mainImg {
+			  border: solid 1px #ccc;
+			  width: 400px;
+			  height: 400px;
+			  padding: 5px;
+			}
+
+			#gallery a {
+			  border: solid 1px #ccc;
+			  width: 100px;
+			  height: 100px;
+			  padding: 3px;
+			  margin: 2px;
+			  float: left;
+			}
+
+			#gallery a:hover {
+			  border-color: green;
+			}
+
+			#gallery li {
+			  list-style: none;
+			}
+
+			#gallery {
+			  margin: 0;
+			  padding: 0;
+			}
+			
+			#small {
+				height: 100px;
+			}
+		</style>
+	</head>
+	
+	 <body>
+		<div id="mainGallery">
+		  <p><img id="mainImg" src="https://im0-tub-ru.yandex.net/i?id=63592418c462822003b7103df7dc97a1-l&n=13"></p>
+		  <ul id="gallery" align="center">
+			<li>
+			  <a href="https://im0-tub-ru.yandex.net/i?id=63592418c462822003b7103df7dc97a1-l&n=13" id="img21" title="Image 2">
+			  <img id="small" src="https://im0-tub-ru.yandex.net/i?id=63592418c462822003b7103df7dc97a1-l&n=13"></a>
+			</li>
+			<li>
+			  <a href="https://pbs.twimg.com/profile_images/516624660998651904/ZA3GCSP-_400x400.jpeg" title="Image 3">
+			  <img id="small" src="https://pbs.twimg.com/profile_images/516624660998651904/ZA3GCSP-_400x400.jpeg"></a>
+			</li>
+			<li>
+			  <a href="https://sun9-61.userapi.com/c849216/v849216799/b6bbf/H54FONEkJCM.jpg?ava=1" title="Image 4">
+			  <img id="small" src="https://sun9-61.userapi.com/c849216/v849216799/b6bbf/H54FONEkJCM.jpg?ava=1"></a>
+			</li>
+			<li>
+			  <a href="https://pbs.twimg.com/profile_images/1186705294/3352_lcv_wpu_bbtzlfd_400x400.jpg" title="Image 5">
+			  <img id="small" src="https://pbs.twimg.com/profile_images/1186705294/3352_lcv_wpu_bbtzlfd_400x400.jpg"></a>
+			</li>
+			<li>
+			  <a href="http://s54.radikal.ru/i146/1103/a4/dadd3bc60345.jpg" title="Image 6">
+			  <img id="small" src="http://s54.radikal.ru/i146/1103/a4/dadd3bc60345.jpg"></a>
+			</li>
+		  </ul>
+		  </div>
+		  
+		  <script>
+			 gallery.onclick = function(event) {
+			  var gallery = event.target.closest('a');
+			  showGallery(gallery.href, gallery.title);
+			  event.preventDefault();
+			}
+
+			function showGallery(href, title) {
+			  mainImg.src = href;
+			  mainImg.alt = title;
+			}
+			</script>
+	</body>
+</html>
